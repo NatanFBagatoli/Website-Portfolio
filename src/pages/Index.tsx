@@ -64,9 +64,7 @@ const Index: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed"
           >
-            An inspiring FrontEnd developer passionate about crafting innovative tech-driven solutions. 
-            Combining front-end finesse with back-end expertise to create seamless, user-centric digital 
-            experiences that make a lasting impact.
+            Turning ideas into digital reality. I specialize in web development with intuitive design, exceptional performance, and tailor-made solutions for your business. Let’s build something extraordinary together.
           </motion.p>
 
           <motion.div

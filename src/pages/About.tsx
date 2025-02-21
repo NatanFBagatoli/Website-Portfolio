@@ -25,7 +25,7 @@ const About = () => {
     <div className="min-h-screen pt-24 pb-24 px-4 md:px-8 ">
 
       <div className="max-w-6xl mx-auto ">
-        {/* Profile Section */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,15 +44,15 @@ const About = () => {
 
 
           <div className="flex-1 space-y-4 text-center md:text-left">
-            <p className="text-lg text-gray-300">💻 Desenvolvedor Web</p>
-            <p className="text-lg text-gray-300">📌 Experiência: Com 2 anos de experiência na área, tenho atuado como Desenvolvedor Front-End, utilizando tecnologias modernas para criar interfaces funcionais e atraentes.</p>
-            <p className="text-lg text-gray-300">📌 Tecnologias: Minhas principais ferramentas incluem React, TypeScript, TailwindCSS, Java, HTML, CSS e JavaScript. Além disso, possuo experiência com bancos de dados MySQL, ferramentas como Postman para testes de APIs e GitHub para versionamento de código.</p>
-            <p className="text-lg text-gray-300">📌 Competências: Tenho habilidade em desenvolver o front-end de sites, garantindo responsividade, desempenho e uma ótima experiência do usuário. Trabalho com componentes reutilizáveis e design modular, otimizando a manutenção e escalabilidade dos projetos.</p>
-            
+         
+            <p className="text-lg text-gray-300">🥇 Hi! My name is Natan Bagatoli. Since I was young, I’ve always been curious about how things work, especially when it comes to technology.</p>
+            <p className="text-lg text-gray-300">💡 That curiosity led me to pursue a degree in Analysis and Systems Development at SENAI/SC, where I learned to turn ideas into functional solutions.</p>
+            <p className="text-lg text-gray-300">🎉Today, at 21, I work as a Freelance Web Developer, building websites and creating digital experiences that connect people and solve real problems. Along the way, I discovered a passion for Machine Learning, a field that challenges me to think differently and constantly learn.</p>
+            <p className="text-lg text-gray-300">🎨 When I’m not coding, I enjoy diving into a good book, which helps me see the world from new perspectives. For me, every project is a chance to grow, and I’m always ready for the next challenge.</p>
           </div>
         </motion.div>
 
-        {/* Skills Section */}
+  
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ const About = () => {
             ))}
           </div>
         </motion.div>
-        {/* Soft Skills Section */}
+
 <motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ const About = () => {
   </div>
 </motion.div>
 
- {/* Academic Experience Section */}
+ 
 <motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}

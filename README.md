@@ -1,4 +1,4 @@
-# 📌 Projeto Website Escolar
+# 📌 Projeto Website Portfolio
 
 Desenvolvimento de um site dinâmico e estratégico para uma instituição de ensino médio, com foco na divulgação de cursos, metodologias, eventos e diferenciais da escola. O projeto foi planejado para atender às demandas específicas da instituição.
 

@@ -9,8 +9,8 @@ const Projects = () => {
       description: "My personal website. I created this website to display my profile, skills and projects. As well as my place to try new technology.",
       image: "https://imgur.com/Xib0hYp.png",
       tech: "React, Typescript & TailwindCss",
-      githubUrl: "https://github.com/NatanFBagatoli/styled-site-creator-7fc744bb",
-      liveUrl: "#"
+      githubUrl: "https://github.com/NatanFBagatoli/Website-Portfolio",
+      liveUrl: "https://website-portfolio-jade.vercel.app/"
     },
     {
       title: "Website Âncora Construções",
