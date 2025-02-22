@@ -5,26 +5,26 @@ import StarryBackground from "../components/StarryBackground";
 const Projects = () => {
   const projects = [
     {
-      title: "Portfolio Website",
-      description: "My personal website. I created this website to display my profile, skills and projects. As well as my place to try new technology.",
+      title: "Website Portfolio",
+      description: "Meu site pessoal. Criei este site para mostrar meu perfil, habilidades e projetos. Bem como meu lugar para experimentar novas tecnologias.",
       image: "https://imgur.com/Xib0hYp.png",
-      tech: "React, Typescript & TailwindCss",
+      tech: "React, TypeScript & TailwindCSS",
       githubUrl: "https://github.com/NatanFBagatoli/Website-Portfolio",
       liveUrl: "https://website-portfolio-jade.vercel.app/"
     },
     {
-      title: "Website Âncora Construções",
-      description: "Modern and functional website for Âncora Construções, highlighting services, projects and contact with professional design.",
+      title: "Website Construtora",
+      description: "Site moderno e funcional de uma construtora, destacando serviços, projetos e contato com profissionais de design.",
       image: "https://imgur.com/2ke5SF9.png",
-      tech: "React, Typescript & TailwindCss",
+      tech: "React, TypeScript & TailwindCSS",
       githubUrl: "https://github.com/NatanFBagatoli/site-creator-magic",
       liveUrl: "#"
     },
     {
       title: "Website High School",
-      description: "Modern and functional website for a school, highlighting courses, events, and contact information with professional design.",
+      description: "Site moderno e funcional para uma escola, com destaque para cursos, eventos e contatos com design profissional.",
       image: "https://imgur.com/mJUESxt.png",
-      tech: "React, Typescript & TailwindCss",
+      tech: "React, TypeScript & TailwindCSS",
       githubUrl: "https://github.com/NatanFBagatoli/Projeto-Website-Escolar",
       liveUrl: "https://projeto-website-escolar-i1jo.vercel.app/"
     },
@@ -66,8 +66,8 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-3xl text-red-700 font-bold mb-2">Past Project Experience</h1>
-          <p className="text-muted-foreground">Explore the projects I've worked on so far</p>
+          <h1 className="text-3xl text-red-700 font-bold mb-2">Experiência anterior em projetos</h1>
+          <p className="text-muted-foreground">Explore os projetos em que trabalhei até agora</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

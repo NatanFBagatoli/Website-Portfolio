@@ -1,6 +1,6 @@
 # 📌 Projeto Website Portfolio
 
-Desenvolvimento de um site dinâmico e estratégico para uma instituição de ensino médio, com foco na divulgação de cursos, metodologias, eventos e diferenciais da escola. O projeto foi planejado para atender às demandas específicas da instituição.
+Desenvolvi um website portfólio com o objetivo de apresentar minhas competências como desenvolvedor Front-End e exibir meus principais projetos. O site foi planejado para proporcionar uma experiência interativa e moderna, destacando minhas habilidades em tecnologias como HTML, CSS, JavaScript, React, TypeScript e TailwindCSS. Além disso, inclui seções dedicadas à minha trajetória profissional e um espaço para que possíveis clientes e recrutadores possam entrar em contato de forma prática e rápida.
 
 ---
 
