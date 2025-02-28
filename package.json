@@ -44,8 +44,10 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
+    "dotenv": "^16.4.7",
     "emailjs-com": "^3.2.0",
     "embla-carousel-react": "^8.3.0",
+    "express": "^4.21.2",
     "framer-motion": "^11.11.17",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.451.0",
@@ -80,5 +82,10 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "Desenvolvi um website portfólio com o objetivo de apresentar minhas competências como desenvolvedor Front-End e exibir meus principais projetos. O site foi planejado para proporcionar uma experiência interativa e moderna, destacando minhas habilidades em tecnologias como HTML, CSS, JavaScript, React, TypeScript e TailwindCSS. Além disso, inclui seções dedicadas à minha trajetória profissional e um espaço para que possíveis clientes e recrutadores possam entrar em contato de forma prática e rápida.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

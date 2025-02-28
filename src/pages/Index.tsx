@@ -31,7 +31,7 @@ const Index: React.FC = () => {
             <div className="w-48 h-48 mx-auto relative">
               <div className="absolute inset-1 rounded-full bg-gradient-to-r from-red-700 to-red-950 animate-spin"></div>
               <img
-                src="https://imgur.com/2YMnwoh.png"
+                src="https://imgur.com/aKq5SuA.png"
                 alt="Profile"
                 className="absolute inset-0 w-[92%] h-[92%] rounded-full object-cover mx-auto my-auto"
               />
