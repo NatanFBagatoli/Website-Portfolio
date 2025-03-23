@@ -13,13 +13,14 @@ const Projects = () => {
       liveUrl: "https://website-portfolio-jade.vercel.app/"
     },
     {
-      title: "Website Construtora",
-      description: "Site moderno e funcional de uma construtora, destacando serviços, projetos e contato com profissionais de design.",
-      image: "https://imgur.com/2ke5SF9.png",
+      title: "Website E-commerce",
+      description: "Site temático e funcional de uma pizzaria italiana, destacando cardápio organizado por categorias, variedade de sabores exclusivos, opções para franquias e empreendedores, e carrinho de compras prático.",
+      image: "https://imgur.com/OWHHAoc.png",
       tech: "React, TypeScript & TailwindCSS",
-      githubUrl: "https://github.com/NatanFBagatoli/site-creator-magic",
+      githubUrl: "https://github.com/NatanFBagatoli/Website-Ecommerce-Pizzaria",
       liveUrl: "#"
     },
+   
     {
       title: "Website High School",
       description: "Site moderno e funcional para uma escola, com destaque para cursos, eventos e contatos com design profissional.",
@@ -29,11 +30,11 @@ const Projects = () => {
       liveUrl: "https://projeto-website-escolar-i1jo.vercel.app/"
     },
     {
-      title: "Coming Soon",
-      description: "Coming Soon",
-      image: "https://imgur.com/OWHHAoc.png",
-      tech: "Coming Soon",
-      githubUrl: "#",
+      title: "Website Construtora",
+      description: "Site moderno e funcional de uma construtora, destacando serviços, projetos e contato com profissionais de design.",
+      image: "https://imgur.com/2ke5SF9.png",
+      tech: "React, TypeScript & TailwindCSS",
+      githubUrl: "https://github.com/NatanFBagatoli/site-creator-magic",
       liveUrl: "#"
     },
     {

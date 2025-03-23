@@ -16,10 +16,10 @@ const Contact = () => {
     const form = e.target as HTMLFormElement;
 
     emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
       form,
-      import.meta.env.VITE_EMAILJS_USER_ID // User ID
+      import.meta.env.VITE_EMAILJS_USER_ID 
     )
     .then((result) => {
       console.log(result.text);
@@ -27,7 +27,7 @@ const Contact = () => {
         title: "Mensagem enviada!",
         description: "Obrigado pela sua mensagem. Entrarei em contato em breve.",
       });
-      form.reset(); // Limpa o formulário após o envio
+      form.reset(); 
     }, (error) => {
       console.log(error.text);
       toast({
@@ -53,7 +53,7 @@ const Contact = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Contact Information */}
+          
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -94,8 +94,6 @@ const Contact = () => {
                 </div>
               </div>
             </motion.div>
-
-            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}

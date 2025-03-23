@@ -14,8 +14,6 @@ const CustomCursor = () => {
 
     const handleMouseLeave = () => setIsVisible(false);
     const handleMouseEnter = () => setIsVisible(true);
-
-    // Enhanced check for interactive elements including text
     const handleHoverCheck = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const isInteractive = 
@@ -91,7 +89,6 @@ const CustomCursor = () => {
           }
         }}
       >
-        {/* Base circle */}
         <circle
           cx="24"
           cy="24"
@@ -102,7 +99,6 @@ const CustomCursor = () => {
           opacity={isHovering ? 0 : 1}
         />
         
-        {/* Center dot */}
         <circle
           cx="24"
           cy="24"
@@ -111,7 +107,6 @@ const CustomCursor = () => {
           opacity={isHovering ? 0 : 1}
         />
 
-        {/* Shuriken points */}
         <motion.g
           initial={{ scale: 0 }}
           animate={{ scale: isHovering ? 1 : 0 }}
@@ -121,22 +116,18 @@ const CustomCursor = () => {
             damping: 20,
           }}
         >
-          {/* North point */}
           <path
             d="M24 6L28.5 18L24 24L19.5 18L24 6Z"
             fill="#FF0000"
           />
-          {/* East point */}
           <path
             d="M42 24L30 28.5L24 24L30 19.5L42 24Z"
             fill="#FF0000"
           />
-          {/* South point */}
           <path
             d="M24 42L19.5 30L24 24L28.5 30L24 42Z"
             fill="#FF0000"
           />
-          {/* West point */}
           <path
             d="M6 24L18 19.5L24 24L18 28.5L6 24Z"
             fill="#FF0000"

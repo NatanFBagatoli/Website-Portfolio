@@ -3,22 +3,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Navbar = () => {
-  // State to control mobile menu visibility
+
   const [isOpen, setIsOpen] = useState(false);
 
-  // Function to toggle mobile menu
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    // Navigation bar with glass effect, fixed at top
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black ">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo/Brand name with link to home */}
         <Link to="/" className="text-gold font-mono text-lg hover:opacity-80 transition-opacity">
           Natan Bagatoli();
         </Link>
-        
-        {/* Mobile menu toggle button */}
+
         <button 
           onClick={toggleMenu}
           className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
@@ -26,9 +22,8 @@ const Navbar = () => {
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
 
-        {/* Desktop navigation menu */}
         <div className="hidden md:flex items-center space-x-8">
-          {/* Navigation links with icons */}
+
           <Link to="/" className="nav-link flex items-center gap-2">
             <House className="w-4 h-4" />
             Home
@@ -46,7 +41,6 @@ const Navbar = () => {
             Contact
           </Link>
 
-          {/* Social media links */}
           <a
             href="https://github.com/NatanFBagatoli"
             target="_blank"
@@ -65,7 +59,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile navigation menu */}
         {isOpen && (
          <div className="absolute top-16 left-0 right-0 bg-[#000000] md:hidden py-4 px-4 flex flex-col items-center space-y-4 animate-fade-in">
          <Link to="/" className="nav-link flex items-center gap-2" onClick={toggleMenu}>
@@ -85,7 +78,6 @@ const Navbar = () => {
               Contact
             </Link>
 
-            {/* Mobile social media links */}
             <a
               href="https://github.com/NatanFBagatoli"
               target="_blank"

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import StarryBackground from "../components/StarryBackground";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // Importando os ícones
+import { ChevronLeft, ChevronRight } from "lucide-react"; 
 
 const About = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -216,7 +216,7 @@ const About = () => {
     { name: "Docker", icon: "docker", category: "Tech Stack", level: "Básico" },
   ];
 
-  const skillsPerPage = 12; // 12 skills por página
+  const skillsPerPage = 12; 
   const totalPages = Math.ceil(skills.length / skillsPerPage);
 
   const handleNextPage = () => {
@@ -249,10 +249,12 @@ const About = () => {
               />
             </div>
             <div className="flex-1 space-y-4 text-center md:text-left">
-              <p className="text-lg text-gray-300">🥇 Olá! Meu nome é Natan Bagatoli. Desde jovem, sempre fui curioso sobre como as coisas funcionam, especialmente quando se trata de tecnologia.</p>
-              <p className="text-lg text-gray-300">💡 Essa curiosidade me levou a cursar Análise e Desenvolvimento de Sistemas no SENAI/SC, onde aprendi a transformar ideias em soluções funcionais.</p>
-              <p className="text-lg text-gray-300">🎉 Hoje, aos 21 anos, trabalho como Desenvolvedor Web Freelancer, criando sites e experiências digitais que conectam pessoas e resolvem problemas reais. Ao longo do caminho, descobri uma paixão por Machine Learning, uma área que me desafia a pensar de forma diferente e a aprender constantemente.</p>
-              <p className="text-lg text-gray-300">🎨 Quando não estou programando, gosto de ler um bom livro, o que me ajuda a ver o mundo sob novas perspectivas. Para mim, cada projeto é uma oportunidade de crescer, e estou sempre pronto para o próximo desafio.</p>
+              <h1 className="text-5xl ">Web Developer</h1>
+              
+              <p className="text-lg text-gray-300">🥇 Hi! My name is Natan Bagatoli. Since I was young, I’ve always been curious about how things work, especially when it comes to technology.</p>
+              <p className="text-lg text-gray-300">💡 That curiosity led me to pursue a degree in Analysis and Systems Development at SENAI/SC, where I learned to turn ideas into functional solutions.</p>
+              <p className="text-lg text-gray-300">🎉 Today, at 21, I work as a Freelance Web Developer, building websites and creating digital experiences that connect people and solve real problems. Along the way, I discovered a passion for Machine Learning, a field that challenges me to think differently and constantly learn.</p>
+              <p className="text-lg text-gray-300">🎨 When I’m not coding, I enjoy reading a good book, which helps me see the world from new perspectives. For me, every project is a chance to grow, and I’m always ready for the next challenge.</p>
             </div>
           </motion.div>
 
@@ -272,13 +274,13 @@ const About = () => {
                   onClick={handlePrevPage}
                   className="text-red-700 hover:text-red-500 transition-colors duration-300"
                 >
-                  <ChevronLeft size={24} /> {/* Ícone de seta para a esquerda */}
+                  <ChevronLeft size={24} /> 
                 </button>
                 <button
                   onClick={handleNextPage}
                   className="text-red-700 hover:text-red-500 transition-colors duration-300"
                 >
-                  <ChevronRight size={24} /> {/* Ícone de seta para a direita */}
+                  <ChevronRight size={24} /> 
                 </button>
               </div>
             </div>
