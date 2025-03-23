@@ -20,14 +20,19 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ### 🏫 Página Inicial
 
+![image6](https://github.com/user-attachments/assets/e3fde990-581a-4550-b531-d311c166b30a)
 
-### 📚 Página de Resultados
+### 📚 Página de Sobre Mim
 
+![image4](https://github.com/user-attachments/assets/3a2eb4f0-e28e-4637-8b0e-073aa221236b)
 
-### 📊 Página de Contatos
+### 📊 Página de Projetos
 
+![image5](https://github.com/user-attachments/assets/7a58b963-fed5-4c58-815d-bf52af3a7ff1)
 
 ### 📱 Link para o site
+
+https://website-portfolio-jade.vercel.app/
 
 ---
 
