@@ -64,7 +64,7 @@ const Index: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed"
           >
-           Transformando ideias em realidade digital. Eu me especializo em desenvolvimento web com design intuitivo, desempenho excepcional e soluções sob medida para o seu negócio. Vamos construir algo extraordinário juntos!
+           Transforming ideas into digital reality. I specialize in web development with intuitive design, exceptional performance and tailored solutions for your business. Let's build something extraordinary together!
           </motion.p>
 
           <motion.div

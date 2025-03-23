@@ -5,46 +5,47 @@ import StarryBackground from "../components/StarryBackground";
 const Projects = () => {
   const projects = [
     {
-      title: "Website Portfolio",
-      description: "Meu site pessoal. Criei este site para mostrar meu perfil, habilidades e projetos. Bem como meu lugar para experimentar novas tecnologias.",
-      image: "https://imgur.com/Xib0hYp.png",
+      title: "Portfolio Website",
+      description: "My personal website. I created this site to showcase my profile, skills and projects. As well as my place to experiment with new technologies.",
+      image: "https://imgur.com/8Y73zqh.png",
       tech: "React, TypeScript & TailwindCSS",
       githubUrl: "https://github.com/NatanFBagatoli/Website-Portfolio",
       liveUrl: "https://website-portfolio-jade.vercel.app/"
     },
     {
-      title: "Website E-commerce",
-      description: "Site temático e funcional de uma pizzaria italiana, destacando cardápio organizado por categorias, variedade de sabores exclusivos, opções para franquias e empreendedores, e carrinho de compras prático.",
-      image: "https://imgur.com/OWHHAoc.png",
+      title: "E-Commerce Website",
+      description: "Thematic and functional website for an Italian pizzeria, highlighting the menu, locations, application with support for orders and franchises",
+      image: "https://imgur.com/DKKr1Q5.png",
       tech: "React, TypeScript & TailwindCSS",
       githubUrl: "https://github.com/NatanFBagatoli/Website-Ecommerce-Pizzaria",
       liveUrl: "#"
     },
    
     {
-      title: "Website High School",
-      description: "Site moderno e funcional para uma escola, com destaque para cursos, eventos e contatos com design profissional.",
+      title: "High School Website",
+      description: "Modern and functional website for a school, highlighting courses, events and contacts with professional design.",
       image: "https://imgur.com/mJUESxt.png",
       tech: "React, TypeScript & TailwindCSS",
       githubUrl: "https://github.com/NatanFBagatoli/Projeto-Website-Escolar",
       liveUrl: "https://projeto-website-escolar-i1jo.vercel.app/"
     },
     {
-      title: "Website Construtora",
-      description: "Site moderno e funcional de uma construtora, destacando serviços, projetos e contato com profissionais de design.",
-      image: "https://imgur.com/2ke5SF9.png",
-      tech: "React, TypeScript & TailwindCSS",
-      githubUrl: "https://github.com/NatanFBagatoli/site-creator-magic",
-      liveUrl: "#"
-    },
-    {
-      title: "Coming Soon",
-      description: "Coming Soon",
-      image: "https://imgur.com/OWHHAoc.png",
-      tech: "Coming Soon",
-      githubUrl: "Coming Soon",
+      title: "Project Messaging App",
+      description: "Real-time messaging app that combines a modern design with a retro aesthetic.",
+      image: "https://imgur.com/NUWkgIP.png",
+      tech: "Html, Css, JavaScript, MongoDB, SocketIO & Node",
+      githubUrl: "https://github.com/NatanFBagatoli/Projeto-ArcMessenger",
       liveUrl: "Coming Soon"
     },
+    {
+      title: "Construction Company Website",
+      description: "Modern and functional website for a construction company, highlighting services, projects and contact with professionals.",
+      image: "https://imgur.com/ReYsmAL.png",
+      tech: "React, TypeScript & TailwindCSS",
+      githubUrl: "https://github.com/NatanFBagatoli/Website-Construction-company",
+      liveUrl: "https://website-construction-company.vercel.app/"
+    },
+   
     {
       title: "Coming Soon",
       description: "Coming Soon",
@@ -67,8 +68,8 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-3xl text-red-700 font-bold mb-2">Experiência anterior em projetos</h1>
-          <p className="text-muted-foreground">Explore os projetos em que trabalhei até agora</p>
+          <h1 className="text-3xl text-red-700 font-bold mb-2">Experience with projects</h1>
+          <p className="text-muted-foreground">Explore the projects I've worked on so far</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

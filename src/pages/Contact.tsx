@@ -24,15 +24,15 @@ const Contact = () => {
     .then((result) => {
       console.log(result.text);
       toast({
-        title: "Mensagem enviada!",
-        description: "Obrigado pela sua mensagem. Entrarei em contato em breve.",
+        title: "Message sent!",
+        description: "Thank you for your message. I will get in touch soon.",
       });
       form.reset(); 
     }, (error) => {
       console.log(error.text);
       toast({
-        title: "Erro ao enviar mensagem",
-        description: "Ocorreu um erro ao tentar enviar sua mensagem. Por favor, tente novamente.",
+        title: "Error sending message",
+        description: "An error occurred while trying to send your message. Please try again.",
         variant: "destructive",
       });
     });
@@ -48,8 +48,8 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
-            <h1 className="text-3xl text-red-700 font-bold mb-2">Entre em contato</h1>
-            <p className="text-2xl text-white text-muted-foreground">Vamos trabalhar juntos no seu próximo projeto!</p>
+            <h1 className="text-3xl text-red-700 font-bold mb-2">Get in touch</h1>
+            <p className="text-2xl text-white text-muted-foreground">Let's work together on your next project!</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -62,7 +62,7 @@ const Contact = () => {
             >
               <div className="bg-black border border-red-950 p-8 rounded-xl space-y-6">
                 <h2 className="text-xl font-semibold text-red mb-6">
-                  Informações de contato
+                Contact information
                 </h2>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
@@ -100,23 +100,23 @@ const Contact = () => {
               transition={{ delay: 0.3 }}
             >
               <form onSubmit={handleSubmit} className="bg-black border border-red-950 p-8 rounded-xl space-y-6">
-                <h2 className="text-xl font-semibold text-red-700 mb-6">Enviar mensagem</h2>
+                <h2 className="text-xl font-semibold text-red-700 mb-6">Send message</h2>
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm text-muted-foreground">Nome</label>
-                    <Input id="name" name="name" placeholder="Seu nome" className="bg-black" />
+                    <label htmlFor="name" className="text-sm text-muted-foreground">Name</label>
+                    <Input id="name" name="name" placeholder="Your name" className="bg-black" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm text-muted-foreground">Email</label>
-                    <Input id="email" name="email" type="email" placeholder="seu.email@exemplo.com" className="bg-black" />
+                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" className="bg-black" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm text-muted-foreground">Mensagem</label>
-                    <Textarea id="message" name="message" placeholder="Sua mensagem" className="min-h-[120px] bg-black" />
+                    <label htmlFor="message" className="text-sm text-muted-foreground">Message</label>
+                    <Textarea id="message" name="message" placeholder="Your message" className="min-h-[120px] bg-black" />
                   </div>
                   <Button className="w-full bg-red-700 hover:bg-red-600" type="submit">
                     <Send className="w-4 h-4 mr-2" />
-                    Enviar mensagem
+                    Send message
                   </Button>
                 </div>
               </form>

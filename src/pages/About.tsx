@@ -8,9 +8,9 @@ const About = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const skills = [
-    { name: "HTML5", icon: "html5", category: "Tech Stack", level: "Avançado" },
-    { name: "React", icon: "react", category: "Tech Stack", level: "Avançado" },
-    { name: "Java", icon: "java", category: "Tech Stack", level: "Intermediário" },
+    { name: "HTML5", icon: "html5", category: "Tech Stack", level: "Advanced" },
+    { name: "React", icon: "react", category: "Tech Stack", level: "Advanced" },
+    { name: "Java", icon: "java", category: "Tech Stack", level: "Intermediate" },
     { 
       name: "ShadcnUI", 
       icon: "custom",
@@ -34,10 +34,10 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Intermediário" 
+      level: "Intermediate" 
     },
-    { name: "CSS3", icon: "css3", category: "Tech Stack", level: "Avançado" },
-    { name: "TailwindCSS", icon: "tailwindcss", category: "Tech Stack", level: "Avançado" },
+    { name: "CSS3", icon: "css3", category: "Tech Stack", level: "Advanced" },
+    { name: "TailwindCSS", icon: "tailwindcss", category: "Tech Stack", level: "Advanced" },
     { 
       name: "Python", 
       icon: "custom",
@@ -62,7 +62,7 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Básico" 
+      level: "Basic" 
     },
     { 
       name: "Next.js", 
@@ -89,10 +89,10 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Intermediário" 
+      level: "Intermediate" 
     },
-    { name: "JavaScript", icon: "javascript", category: "Tech Stack", level: "Avançado" },
-    { name: "TypeScript", icon: "typescript", category: "Tech Stack", level: "Avançado" },
+    { name: "JavaScript", icon: "javascript", category: "Tech Stack", level: "Advanced" },
+    { name: "TypeScript", icon: "typescript", category: "Tech Stack", level: "Advanced" },
     { 
       name: "Lua", 
       icon: "custom",
@@ -112,7 +112,7 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Básico" 
+      level: "Basic" 
     },
     { 
       name: "Vite", 
@@ -139,11 +139,11 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Intermediário" 
+      level: "Intermediate" 
     },
-    { name: "FireBase", icon: "firebase", category: "Tech Stack", level: "Básico" },
-    { name: "Postman", icon: "postman", category: "Tech Stack", level: "Básico" },
-    { name: "MongoDB", icon: "mongodb", category: "Tech Stack", level: "Básico" },
+    { name: "FireBase", icon: "firebase", category: "Tech Stack", level: "Basic" },
+    { name: "Postman", icon: "postman", category: "Tech Stack", level: "Basic" },
+    { name: "MongoDB", icon: "mongodb", category: "Tech Stack", level: "Basic" },
     { 
       name: "Git", 
       icon: "custom",
@@ -157,7 +157,7 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Avançado" 
+      level: "Advanced" 
     },
     { 
       name: "GitHub", 
@@ -173,7 +173,7 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Avançado" 
+      level: "Advanced" 
     },
     { name: "MySql", icon: "mysql", category: "Tech Stack", level: "Intermediário" },
     { 
@@ -191,7 +191,7 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Básico" 
+      level: "Basic" 
     },
     { 
       name: "Three.js", 
@@ -211,9 +211,9 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Básico" 
+      level: "Basic" 
     },
-    { name: "Docker", icon: "docker", category: "Tech Stack", level: "Básico" },
+    { name: "Docker", icon: "docker", category: "Tech Stack", level: "Basic" },
   ];
 
   const skillsPerPage = 12; 
@@ -327,12 +327,12 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { name: "🤝Trabalho em equipe", description: "Capacidade de colaborar com equipes multidisciplinares para alcançar objetivos comuns." },
-                { name: "🗣️Comunicação", description: "Facilidade para transmitir ideias de forma clara e objetiva, tanto verbalmente quanto por escrito." },
-                { name: "🧠Curiosidade intelectual", description: "Interesse constante em aprender e explorar novos conhecimentos, buscando ampliar o entendimento sobre diversos temas." },
-                { name: "🔄Adaptabilidade", description: "Capacidade de aprender novas tecnologias e se adaptar rapidamente a mudanças." },
-                { name: "⏳Gestão do tempo", description: "Organização eficiente para lidar com prazos e priorizar tarefas." },
-                { name: "💡Resolução de problemas", description: "Habilidade em analisar desafios e propor soluções eficazes." },
+              { name: "🤝 Teamwork", description: "Ability to collaborate with multidisciplinary teams to achieve common goals." },
+              { name: "🗣️ Communication", description: "Ease in conveying ideas clearly and objectively, both verbally and in writing." },
+              { name: "🧠 Intellectual Curiosity", description: "Constant interest in learning and exploring new knowledge, seeking to broaden understanding on various topics." },
+              { name: "⚡ Quick Learner", description: "Ability to quickly grasp new concepts, technologies, or processes and apply them effectively." },
+              { name: "⏳ Time Management", description: "Efficient organization to handle deadlines and prioritize tasks." },
+              { name: "💡 Problem Solving", description: "Skill in analyzing challenges and proposing effective solutions." }
               ].map((skill, index) => (
                 <motion.div
                   key={index}
@@ -362,21 +362,21 @@ const About = () => {
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     {[
       {
-        institution: "🔵SENAI - Análise e Desenvolvimento de Sistemas",
+        institution: "🔵SENAI - Systems Analysis and Development",
         period: "Mar de 2023 - Dez de 2024",
-        description: "Curso técnico voltado para programação e boas práticas de desenvolvimento, abrangendo Front-End, Back-End e banco de dados.",
+        description: "Graduated in Systems Analysis and Development, where I studied Software Engineering, Databases, Object-Oriented Programming (OOP), Algorithms, Data Structures, and Java.",
         
       },
       {
-        institution: "🟡Entra21 Curso JavaScript - Senac",
+        institution: "🟡SENAC - Entra21 Course JavaScript",
         period: "Jan de 2025 - Jun de 2025",
-        description: "O Entra21 é um programa de capacitação em tecnologia focado em JavaScript, uma das linguagens mais populares para desenvolvimento web.",
+        description: "Entra21 is a technology training program focused on JavaScript, where I study libraries, frameworks, programming logic, MySQL, HTML, CSS, JavaScript, plugins, entrepreneurship, and professional development.",
        
       },
       {
-        institution: "🟢Aulas/Exercícios - Khan Academy",
+        institution: "🟣UDEMY - Web Development Courses",
         period: "Jun de 2024 - Atualmente",
-        description: "A Khan Academy é uma plataforma de ensino online que oferece aulas e exercícios em diversas áreas, incluindo programação, matemática e ciências.",
+        description: "Udemy is an online course platform focused on practical learning, where I study Web Development, including HTML5, CSS3, JavaScript (ES6+), React.js, Node.js, Express.js, Git and GitHub, RESTful APIs, Databases (SQL and NoSQL).",
         
       },
     ].map((exp, index) => (
