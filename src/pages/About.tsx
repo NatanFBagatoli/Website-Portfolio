@@ -1,9 +1,110 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import StarryBackground from "../components/StarryBackground";
-import { ChevronLeft, ChevronRight } from "lucide-react"; 
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const About = () => {
+const texts = {
+  pt: {
+    title: "Desenvolvedor Web",
+    about: [
+      "🥇 Olá! Meu nome é Natan Bagatoli. Desde pequeno, sempre fui curioso sobre como as coisas funcionam, especialmente quando se trata de tecnologia.",
+      "💡 Essa curiosidade me levou a cursar Análise e Desenvolvimento de Sistemas no SENAI/SC, onde aprendi a transformar ideias em soluções funcionais.",
+      "🎉 Hoje, aos 21 anos, atuo como Desenvolvedor Web Freelancer, criando sites e experiências digitais que conectam pessoas e resolvem problemas reais. No caminho, descobri uma paixão por Machine Learning, área que me desafia a pensar diferente e aprender constantemente.",
+      "🎨 Quando não estou programando, gosto de ler um bom livro, o que me ajuda a ver o mundo sob novas perspectivas. Para mim, cada projeto é uma oportunidade de crescer, e estou sempre pronto para o próximo desafio."
+    ],
+    skills: "Habilidades",
+    softSkills: "Soft Skills",
+    professionalExp: "Experiência Profissional",
+    academicExp: "Experiência Acadêmica",
+    softSkillsList: [
+      { name: "🤝 Trabalho em Equipe", description: "Capacidade de colaborar com equipes multidisciplinares para alcançar objetivos comuns." },
+      { name: "🗣️ Comunicação", description: "Facilidade em transmitir ideias de forma clara e objetiva, tanto verbalmente quanto por escrito." },
+      { name: "🧠 Curiosidade Intelectual", description: "Interesse constante em aprender e explorar novos conhecimentos, buscando ampliar a compreensão sobre diversos temas." },
+      { name: "⚡ Aprendiz Rápido", description: "Habilidade de absorver rapidamente novos conceitos, tecnologias ou processos e aplicá-los de forma eficaz." },
+      { name: "⏳ Gestão do Tempo", description: "Organização eficiente para lidar com prazos e priorizar tarefas." },
+      { name: "💡 Resolução de Problemas", description: "Capacidade de analisar desafios e propor soluções eficazes." }
+    ],
+    professionalExpList: [
+      {
+        company: "💻 Desenvolvedor Web Freelancer",
+        period: "Jan 2022 - Atual",
+        description: "Desenvolvimento de sites institucionais, landing pages e sistemas sob demanda para clientes de diversos setores. Responsável por todo o processo, desde o levantamento de requisitos até a entrega final, utilizando tecnologias como React, Next.js, TailwindCSS e integração com APIs.",
+      },
+    ],
+    academicExpList: [
+      {
+        institution: "🔵SENAI - Análise e Desenvolvimento de Sistemas",
+        period: "Mar 2023 - Dez 2024",
+        description: "Formação em Análise e Desenvolvimento de Sistemas, com estudos em Engenharia de Software, Bancos de Dados, Programação Orientada a Objetos (POO), Algoritmos, Estruturas de Dados e Java.",
+      },
+      {
+        institution: "🟡SENAC - Curso Entra21 JavaScript",
+        period: "Jan 2025 - Jun 2025",
+        description: "Programa de formação focado em JavaScript, abordando bibliotecas, frameworks, lógica de programação, MySQL, HTML, CSS, JavaScript, plugins, empreendedorismo e desenvolvimento profissional.",
+      },
+      {
+        institution: "🟣UDEMY - Cursos de Desenvolvimento Web",
+        period: "Jun 2024 - Atual",
+        description: "Plataforma de cursos online com foco em aprendizado prático, onde estudo Desenvolvimento Web, incluindo HTML5, CSS3, JavaScript (ES6+), React.js, Node.js, Express.js, Git e GitHub, APIs RESTful, Bancos de Dados (SQL e NoSQL).",
+      },
+    ],
+    language: "Português",
+    switch: "English"
+  },
+  en: {
+    title: "Web Developer",
+    about: [
+      "🥇 Hi! My name is Natan Bagatoli. Since I was young, I’ve always been curious about how things work, especially when it comes to technology.",
+      "💡 That curiosity led me to pursue a degree in Analysis and Systems Development at SENAI/SC, where I learned to turn ideas into functional solutions.",
+      "🎉 Today, at 21, I work as a Freelance Web Developer, building websites and creating digital experiences that connect people and solve real problems. Along the way, I discovered a passion for Machine Learning, a field that challenges me to think differently and constantly learn.",
+      "🎨 When I’m not coding, I enjoy reading a good book, which helps me see the world from new perspectives. For me, every project is a chance to grow, and I’m always ready for the next challenge."
+    ],
+    skills: "Skills",
+    softSkills: "Soft Skills",
+    professionalExp: "Professional Experience",
+    academicExp: "Academic Experience",
+    softSkillsList: [
+      { name: "🤝 Teamwork", description: "Ability to collaborate with multidisciplinary teams to achieve common goals." },
+      { name: "🗣️ Communication", description: "Ease in conveying ideas clearly and objectively, both verbally and in writing." },
+      { name: "🧠 Intellectual Curiosity", description: "Constant interest in learning and exploring new knowledge, seeking to broaden understanding on various topics." },
+      { name: "⚡ Quick Learner", description: "Ability to quickly grasp new concepts, technologies, or processes and apply them effectively." },
+      { name: "⏳ Time Management", description: "Efficient organization to handle deadlines and prioritize tasks." },
+      { name: "💡 Problem Solving", description: "Skill in analyzing challenges and proposing effective solutions." }
+    ],
+    professionalExpList: [
+      {
+        company: "💻 Freelance Web Developer",
+        period: "Jan 2022 - Present",
+        description: "Development of institutional websites, landing pages, and custom systems for clients from various sectors. Responsible for the entire process, from requirements gathering to final delivery, using technologies such as React, Next.js, TailwindCSS, and API integration.",
+      },
+    ],
+    academicExpList: [
+      {
+        institution: "🔵SENAI - Systems Analysis and Development",
+        period: "Mar 2023 - Dec 2024",
+        description: "Graduated in Systems Analysis and Development, where I studied Software Engineering, Databases, Object-Oriented Programming (OOP), Algorithms, Data Structures, and Java.",
+      },
+      {
+        institution: "🟡SENAC - Entra21 JavaScript Course",
+        period: "Jan 2025 - Jun 2025",
+        description: "Entra21 is a technology training program focused on JavaScript, where I study libraries, frameworks, programming logic, MySQL, HTML, CSS, JavaScript, plugins, entrepreneurship, and professional development.",
+      },
+      {
+        institution: "🟣UDEMY - Web Development Courses",
+        period: "Jun 2024 - Present",
+        description: "Udemy is an online course platform focused on practical learning, where I study Web Development, including HTML5, CSS3, JavaScript (ES6+), React.js, Node.js, Express.js, Git and GitHub, RESTful APIs, Databases (SQL and NoSQL).",
+      },
+    ],
+    language: "English",
+    switch: "Português"
+  }
+};
+
+type AboutProps = {
+  lang: "pt" | "en";
+};
+
+const About = ({ lang }: AboutProps) => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -34,7 +135,7 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Intermediate" 
+      level: "Advanced" 
     },
     { name: "CSS3", icon: "css3", category: "Tech Stack", level: "Advanced" },
     { name: "TailwindCSS", icon: "tailwindcss", category: "Tech Stack", level: "Advanced" },
@@ -89,7 +190,7 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Intermediate" 
+      level: "Advanced" 
     },
     { name: "JavaScript", icon: "javascript", category: "Tech Stack", level: "Advanced" },
     { name: "TypeScript", icon: "typescript", category: "Tech Stack", level: "Advanced" },
@@ -139,11 +240,11 @@ const About = () => {
       </svg>
       ),
       category: "Tech Stack", 
-      level: "Intermediate" 
+      level: "Advanced" 
     },
     { name: "FireBase", icon: "firebase", category: "Tech Stack", level: "Basic" },
-    { name: "Postman", icon: "postman", category: "Tech Stack", level: "Basic" },
-    { name: "MongoDB", icon: "mongodb", category: "Tech Stack", level: "Basic" },
+    { name: "Postman", icon: "postman", category: "Tech Stack", level: "Advanced" },
+    { name: "MongoDB", icon: "mongodb", category: "Tech Stack", level: "Advanced" },
     { 
       name: "Git", 
       icon: "custom",
@@ -214,6 +315,7 @@ const About = () => {
       level: "Basic" 
     },
     { name: "Docker", icon: "docker", category: "Tech Stack", level: "Basic" },
+    
   ];
 
   const skillsPerPage = 12; 
@@ -230,11 +332,15 @@ const About = () => {
   const startIndex = currentPage * skillsPerPage;
   const currentSkills = skills.slice(startIndex, startIndex + skillsPerPage);
 
+  const t = texts[lang];
+
   return (
     <>
       <StarryBackground />
       <div className="min-h-screen pt-24 pb-24 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
+          {/* Espaço reservado para alinhamento, se necessário */}
+          <div className="flex justify-end mb-4"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -243,21 +349,20 @@ const About = () => {
             <div className="w-48 h-48 relative">
               <div className="absolute inset-1 rounded-full bg-gradient-to-r from-red-700 to-red-950 animate-spin"></div>
               <img
-                src="https://imgur.com/aKq5SuA.png"
+                src="https://imgur.com/bIebWJC.png"
                 alt="Profile"
                 className="absolute inset-0 w-[92%] h-[92%] rounded-full object-cover mx-auto my-auto"
               />
             </div>
             <div className="flex-1 space-y-4 text-center md:text-left">
-              <h1 className="text-5xl ">Web Developer</h1>
-              
-              <p className="text-lg text-gray-300">🥇 Hi! My name is Natan Bagatoli. Since I was young, I’ve always been curious about how things work, especially when it comes to technology.</p>
-              <p className="text-lg text-gray-300">💡 That curiosity led me to pursue a degree in Analysis and Systems Development at SENAI/SC, where I learned to turn ideas into functional solutions.</p>
-              <p className="text-lg text-gray-300">🎉 Today, at 21, I work as a Freelance Web Developer, building websites and creating digital experiences that connect people and solve real problems. Along the way, I discovered a passion for Machine Learning, a field that challenges me to think differently and constantly learn.</p>
-              <p className="text-lg text-gray-300">🎨 When I’m not coding, I enjoy reading a good book, which helps me see the world from new perspectives. For me, every project is a chance to grow, and I’m always ready for the next challenge.</p>
+              <h1 className="text-5xl ">{t.title}</h1>
+              {t.about.map((p, i) => (
+                <p key={i} className="text-lg text-gray-300">{p}</p>
+              ))}
             </div>
           </motion.div>
 
+          {/* Skills */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -267,24 +372,23 @@ const About = () => {
             <div className="flex items-center gap-4">
               <h2 className="text-2xl font-bold text-red-700 flex items-center gap-2">
                 <span className="w-12 h-0.5 bg-red-700 bg-gradient-to-r from-red-700 to-red-950"></span>
-                Skills
+                {t.skills}
               </h2>
               <div className="flex gap-2">
                 <button
                   onClick={handlePrevPage}
                   className="text-red-700 hover:text-red-500 transition-colors duration-300"
                 >
-                  <ChevronLeft size={24} /> 
+                  <ChevronLeft size={24} />
                 </button>
                 <button
                   onClick={handleNextPage}
                   className="text-red-700 hover:text-red-500 transition-colors duration-300"
                 >
-                  <ChevronRight size={24} /> 
+                  <ChevronRight size={24} />
                 </button>
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {currentSkills.map((skill, index) => (
                 <motion.div
@@ -296,14 +400,14 @@ const About = () => {
                   onMouseLeave={() => setHoveredSkill(null)}
                   className="group relative bg-black p-4 rounded-lg border border-red-700/20 hover:border-red-700/40 transition-all duration-300 overflow-hidden"
                 >
-                <div className="relative z-10 flex items-center gap-3">
-                  {skill.svgIcon ? (
-                    skill.svgIcon
-                  ) : (
-                    <i
-                      className={`devicon-${skill.icon}-plain colored text-2xl group-hover:text-white transition-colors duration-300`}
-                    ></i>
-                  )}
+                  <div className="relative z-10 flex items-center gap-3">
+                    {skill.svgIcon ? (
+                      skill.svgIcon
+                    ) : (
+                      <i
+                        className={`devicon-${skill.icon}-plain colored text-2xl group-hover:text-white transition-colors duration-300`}
+                      ></i>
+                    )}
                     <span className="text-lg group-hover:text-white transition-colors duration-300">
                       {hoveredSkill === skill.name ? skill.level : skill.name}
                     </span>
@@ -313,7 +417,8 @@ const About = () => {
               ))}
             </div>
           </motion.div>
-         
+
+          {/* Soft Skills */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -322,18 +427,10 @@ const About = () => {
           >
             <h2 className="text-2xl font-bold text-red-700 flex items-center gap-2">
               <span className="w-12 h-0.5 bg-red-700 bg-gradient-to-r from-red-700 to-red-950"></span>
-              Soft Skills
+              {t.softSkills}
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-              { name: "🤝 Teamwork", description: "Ability to collaborate with multidisciplinary teams to achieve common goals." },
-              { name: "🗣️ Communication", description: "Ease in conveying ideas clearly and objectively, both verbally and in writing." },
-              { name: "🧠 Intellectual Curiosity", description: "Constant interest in learning and exploring new knowledge, seeking to broaden understanding on various topics." },
-              { name: "⚡ Quick Learner", description: "Ability to quickly grasp new concepts, technologies, or processes and apply them effectively." },
-              { name: "⏳ Time Management", description: "Efficient organization to handle deadlines and prioritize tasks." },
-              { name: "💡 Problem Solving", description: "Skill in analyzing challenges and proposing effective solutions." }
-              ].map((skill, index) => (
+              {t.softSkillsList.map((skill, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -348,53 +445,61 @@ const About = () => {
             </div>
           </motion.div>
 
+          {/* Professional Experience */}
           <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.4 }}
-  className="space-y-8 mt-12"
->
-  <h2 className="text-2xl font-bold text-red-700 flex items-center gap-2">
-    <span className="w-12 h-0.5 bg-red-700 bg-gradient-to-r from-red-700 to-red-950"></span>
-    Experiências Acadêmicas
-  </h2>
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="space-y-8 mt-12"
+          >
+            <h2 className="text-2xl font-bold text-red-700 flex items-center gap-2">
+              <span className="w-12 h-0.5 bg-red-700 bg-gradient-to-r from-red-700 to-red-950"></span>
+              {t.professionalExp}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {t.professionalExpList.map((exp, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 * index }}
+                  className="bg-black p-6 rounded-lg border border-red-700/20 hover:border-red-700/40 transition-all duration-300 flex flex-col items-center text-center"
+                >
+                  <h3 className="text-xl font-semibold text-white">{exp.company}</h3>
+                  <p className="text-sm text-gray-400">{exp.period}</p>
+                  <p className="text-gray-300 mt-2">{exp.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    {[
-      {
-        institution: "🔵SENAI - Systems Analysis and Development",
-        period: "Mar de 2023 - Dez de 2024",
-        description: "Graduated in Systems Analysis and Development, where I studied Software Engineering, Databases, Object-Oriented Programming (OOP), Algorithms, Data Structures, and Java.",
-        
-      },
-      {
-        institution: "🟡SENAC - Entra21 Course JavaScript",
-        period: "Jan de 2025 - Jun de 2025",
-        description: "Entra21 is a technology training program focused on JavaScript, where I study libraries, frameworks, programming logic, MySQL, HTML, CSS, JavaScript, plugins, entrepreneurship, and professional development.",
-       
-      },
-      {
-        institution: "🟣UDEMY - Web Development Courses",
-        period: "Jun de 2024 - Atualmente",
-        description: "Udemy is an online course platform focused on practical learning, where I study Web Development, including HTML5, CSS3, JavaScript (ES6+), React.js, Node.js, Express.js, Git and GitHub, RESTful APIs, Databases (SQL and NoSQL).",
-        
-      },
-    ].map((exp, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 * index }}
-        className="bg-black p-6 rounded-lg border border-red-700/20 hover:border-red-700/40 transition-all duration-300 flex flex-col items-center text-center"
-      >
-       
-        <h3 className="text-xl font-semibold text-white">{exp.institution}</h3>
-        <p className="text-sm text-gray-400">{exp.period}</p>
-        <p className="text-gray-300 mt-2">{exp.description}</p>
-      </motion.div>
-    ))}
-  </div>
-</motion.div>
+          {/* Academic Experience */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="space-y-8 mt-12"
+          >
+            <h2 className="text-2xl font-bold text-red-700 flex items-center gap-2">
+              <span className="w-12 h-0.5 bg-red-700 bg-gradient-to-r from-red-700 to-red-950"></span>
+              {t.academicExp}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {t.academicExpList.map((exp, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 * index }}
+                  className="bg-black p-6 rounded-lg border border-red-700/20 hover:border-red-700/40 transition-all duration-300 flex flex-col items-center text-center"
+                >
+                  <h3 className="text-xl font-semibold text-white">{exp.institution}</h3>
+                  <p className="text-sm text-gray-400">{exp.period}</p>
+                  <p className="text-gray-300 mt-2">{exp.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </>

@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,7 +17,7 @@ import Projects from "./pages/Projects";
 const queryClient = new QueryClient();
 
 const App = () => {
-
+  const [lang, setLang] = useState<"pt" | "en">("pt");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -48,13 +47,13 @@ const App = () => {
             <BrowserRouter>
              
               <CustomCursor />
-              <Navbar />
+              <Navbar lang={lang} setLang={setLang} />
   
               <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/" element={<Index lang={lang} />} />
+                <Route path="/about" element={<About lang={lang} />} />
+                <Route path="/projects" element={<Projects lang={lang} />} />
+                <Route path="/contact" element={<Contact lang={lang} />} />
               </Routes>
             </BrowserRouter>
           )}

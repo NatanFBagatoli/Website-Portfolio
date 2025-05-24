@@ -5,7 +5,6 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Método não permitido' });
   }
 
-  // Validação básica dos dados
   const { nome, email, mensagem } = req.body;
   if (!nome || !email || !mensagem) {
     return res.status(400).json({ error: 'Dados incompletos' });

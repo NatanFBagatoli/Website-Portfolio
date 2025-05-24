@@ -7,8 +7,52 @@ import { useToast } from "@/components/ui/use-toast";
 import StarryBackground from "../components/StarryBackground";
 import emailjs from 'emailjs-com';
 
-const Contact = () => {
+type ContactProps = {
+  lang: "pt" | "en";
+};
+
+const texts = {
+  pt: {
+    title: "Entre em contato",
+    subtitle: "Vamos trabalhar juntos no seu próximo projeto!",
+    contactInfo: "Informações de contato",
+    name: "Nome",
+    email: "Email",
+    message: "Mensagem",
+    sendMessage: "Enviar mensagem",
+    namePlaceholder: "Seu nome",
+    emailPlaceholder: "seu.email@exemplo.com",
+    messagePlaceholder: "Sua mensagem",
+    linkedin: "Perfil no LinkedIn",
+    github: "Perfil no GitHub",
+    toastSuccessTitle: "Mensagem enviada!",
+    toastSuccessDesc: "Obrigado pela mensagem. Entrarei em contato em breve.",
+    toastErrorTitle: "Erro ao enviar mensagem",
+    toastErrorDesc: "Ocorreu um erro ao tentar enviar sua mensagem. Por favor, tente novamente.",
+  },
+  en: {
+    title: "Get in touch",
+    subtitle: "Let's work together on your next project!",
+    contactInfo: "Contact information",
+    name: "Name",
+    email: "Email",
+    message: "Message",
+    sendMessage: "Send message",
+    namePlaceholder: "Your name",
+    emailPlaceholder: "your.email@example.com",
+    messagePlaceholder: "Your message",
+    linkedin: "LinkedIn Profile",
+    github: "GitHub Profile",
+    toastSuccessTitle: "Message sent!",
+    toastSuccessDesc: "Thank you for your message. I will get in touch soon.",
+    toastErrorTitle: "Error sending message",
+    toastErrorDesc: "An error occurred while trying to send your message. Please try again.",
+  }
+};
+
+const Contact = ({ lang }: ContactProps) => {
   const { toast } = useToast();
+  const t = texts[lang];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,17 +66,15 @@ const Contact = () => {
       import.meta.env.VITE_EMAILJS_USER_ID 
     )
     .then((result) => {
-      console.log(result.text);
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I will get in touch soon.",
+        title: t.toastSuccessTitle,
+        description: t.toastSuccessDesc,
       });
       form.reset(); 
     }, (error) => {
-      console.log(error.text);
       toast({
-        title: "Error sending message",
-        description: "An error occurred while trying to send your message. Please try again.",
+        title: t.toastErrorTitle,
+        description: t.toastErrorDesc,
         variant: "destructive",
       });
     });
@@ -48,12 +90,11 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
-            <h1 className="text-3xl text-red-700 font-bold mb-2">Get in touch</h1>
-            <p className="text-2xl text-white text-muted-foreground">Let's work together on your next project!</p>
+            <h1 className="text-3xl text-red-700 font-bold mb-2">{t.title}</h1>
+            <p className="text-2xl text-white text-muted-foreground">{t.subtitle}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -62,7 +103,7 @@ const Contact = () => {
             >
               <div className="bg-black border border-red-950 p-8 rounded-xl space-y-6">
                 <h2 className="text-xl font-semibold text-red mb-6">
-                Contact information
+                  {t.contactInfo}
                 </h2>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
@@ -80,7 +121,7 @@ const Contact = () => {
                     className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Linkedin className="text-red-700 w-5 h-5" />
-                    <span>LinkedIn Profile</span>
+                    <span>{t.linkedin}</span>
                   </a>
                   <a
                     href="https://github.com/NatanFBagatoli"
@@ -89,7 +130,7 @@ const Contact = () => {
                     className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Github className="text-red-700 w-5 h-5" />
-                    <span>GitHub Profile</span>
+                    <span>{t.github}</span>
                   </a>
                 </div>
               </div>
@@ -100,23 +141,23 @@ const Contact = () => {
               transition={{ delay: 0.3 }}
             >
               <form onSubmit={handleSubmit} className="bg-black border border-red-950 p-8 rounded-xl space-y-6">
-                <h2 className="text-xl font-semibold text-red-700 mb-6">Send message</h2>
+                <h2 className="text-xl font-semibold text-red-700 mb-6">{t.sendMessage}</h2>
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm text-muted-foreground">Name</label>
-                    <Input id="name" name="name" placeholder="Your name" className="bg-black" />
+                    <label htmlFor="name" className="text-sm text-muted-foreground">{t.name}</label>
+                    <Input id="name" name="name" placeholder={t.namePlaceholder} className="bg-black" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm text-muted-foreground">Email</label>
-                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" className="bg-black" />
+                    <label htmlFor="email" className="text-sm text-muted-foreground">{t.email}</label>
+                    <Input id="email" name="email" type="email" placeholder={t.emailPlaceholder} className="bg-black" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm text-muted-foreground">Message</label>
-                    <Textarea id="message" name="message" placeholder="Your message" className="min-h-[120px] bg-black" />
+                    <label htmlFor="message" className="text-sm text-muted-foreground">{t.message}</label>
+                    <Textarea id="message" name="message" placeholder={t.messagePlaceholder} className="min-h-[120px] bg-black" />
                   </div>
                   <Button className="w-full bg-red-700 hover:bg-red-600" type="submit">
                     <Send className="w-4 h-4 mr-2" />
-                    Send message
+                    {t.sendMessage}
                   </Button>
                 </div>
               </form>
