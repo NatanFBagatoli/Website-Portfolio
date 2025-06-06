@@ -27,7 +27,7 @@ const texts = {
     professionalExpList: [
       {
         company: "💻 Desenvolvedor Web Freelancer",
-        period: "Jan 2022 - Atual",
+        period: "Out 2024 - Atual",
         description: "Desenvolvimento de sites institucionais, landing pages e sistemas sob demanda para clientes de diversos setores. Responsável por todo o processo, desde o levantamento de requisitos até a entrega final, utilizando tecnologias como React, Next.js, TailwindCSS e integração com APIs.",
       },
     ],
@@ -74,7 +74,7 @@ const texts = {
     professionalExpList: [
       {
         company: "💻 Freelance Web Developer",
-        period: "Jan 2022 - Present",
+        period: "Oct 2024 - Present",
         description: "Development of institutional websites, landing pages, and custom systems for clients from various sectors. Responsible for the entire process, from requirements gathering to final delivery, using technologies such as React, Next.js, TailwindCSS, and API integration.",
       },
     ],
